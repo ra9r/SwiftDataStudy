@@ -8,21 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		2A722BFD2AE401480049BBEC /* SwiftDataStudyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A722BFC2AE401480049BBEC /* SwiftDataStudyApp.swift */; };
-		2A722BFF2AE401480049BBEC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A722BFE2AE401480049BBEC /* ContentView.swift */; };
-		2A722C012AE401480049BBEC /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A722C002AE401480049BBEC /* Item.swift */; };
 		2A722C032AE401490049BBEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A722C022AE401490049BBEC /* Assets.xcassets */; };
 		2A722C062AE401490049BBEC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A722C052AE401490049BBEC /* Preview Assets.xcassets */; };
+		2A96B9322AFA0EB800155654 /* MeasuredRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96B92F2AFA0EB800155654 /* MeasuredRecord.swift */; };
+		2A96B9332AFA0EB800155654 /* MeasurmentEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96B9302AFA0EB800155654 /* MeasurmentEditorView.swift */; };
+		2A96B9342AFA0EB800155654 /* MeasurementListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96B9312AFA0EB800155654 /* MeasurementListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2A722BF92AE401480049BBEC /* SwiftDataStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDataStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A722BFC2AE401480049BBEC /* SwiftDataStudyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataStudyApp.swift; sourceTree = "<group>"; };
-		2A722BFE2AE401480049BBEC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		2A722C002AE401480049BBEC /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		2A722C022AE401490049BBEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A722C052AE401490049BBEC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2A722C072AE401490049BBEC /* SwiftDataStudy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftDataStudy.entitlements; sourceTree = "<group>"; };
 		2A722C082AE401490049BBEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A96B92F2AFA0EB800155654 /* MeasuredRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasuredRecord.swift; sourceTree = "<group>"; };
+		2A96B9302AFA0EB800155654 /* MeasurmentEditorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasurmentEditorView.swift; sourceTree = "<group>"; };
+		2A96B9312AFA0EB800155654 /* MeasurementListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasurementListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +58,9 @@
 			isa = PBXGroup;
 			children = (
 				2A722BFC2AE401480049BBEC /* SwiftDataStudyApp.swift */,
-				2A722BFE2AE401480049BBEC /* ContentView.swift */,
-				2A722C002AE401480049BBEC /* Item.swift */,
+				2A96B92F2AFA0EB800155654 /* MeasuredRecord.swift */,
+				2A96B9312AFA0EB800155654 /* MeasurementListView.swift */,
+				2A96B9302AFA0EB800155654 /* MeasurmentEditorView.swift */,
 				2A722C022AE401490049BBEC /* Assets.xcassets */,
 				2A722C072AE401490049BBEC /* SwiftDataStudy.entitlements */,
 				2A722C082AE401490049BBEC /* Info.plist */,
@@ -144,9 +147,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A722BFF2AE401480049BBEC /* ContentView.swift in Sources */,
-				2A722C012AE401480049BBEC /* Item.swift in Sources */,
+				2A96B9332AFA0EB800155654 /* MeasurmentEditorView.swift in Sources */,
 				2A722BFD2AE401480049BBEC /* SwiftDataStudyApp.swift in Sources */,
+				2A96B9342AFA0EB800155654 /* MeasurementListView.swift in Sources */,
+				2A96B9322AFA0EB800155654 /* MeasuredRecord.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,23 +10,26 @@ import SwiftData
 
 @main
 struct SwiftDataStudyApp: App {
-    var sharedModelContainer: ModelContainer = {
+    var sharedModelContainer: ModelContainer
+    
+    init() {
         let schema = Schema([
-            Item.self,
+            MeasuredRecord.self
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
+        
         do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
+            sharedModelContainer = try ModelContainer(for: schema, configurations: [modelConfiguration])
         } catch {
-            fatalError("Could not create ModelContainer: \(error)")
+            fatalError("Could not initialize ModelContainer")
         }
-    }()
+    }
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MeasurementListView()
         }
+//        .modelContainer(for: [MeasuredRecord.self])
         .modelContainer(sharedModelContainer)
     }
 }
