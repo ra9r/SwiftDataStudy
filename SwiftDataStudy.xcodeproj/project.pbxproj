@@ -11,8 +11,14 @@
 		2A722C032AE401490049BBEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A722C022AE401490049BBEC /* Assets.xcassets */; };
 		2A722C062AE401490049BBEC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A722C052AE401490049BBEC /* Preview Assets.xcassets */; };
 		2A96B9322AFA0EB800155654 /* MeasuredRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96B92F2AFA0EB800155654 /* MeasuredRecord.swift */; };
-		2A96B9332AFA0EB800155654 /* MeasurmentEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96B9302AFA0EB800155654 /* MeasurmentEditorView.swift */; };
-		2A96B9342AFA0EB800155654 /* MeasurementListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96B9312AFA0EB800155654 /* MeasurementListView.swift */; };
+		2A96B9342AFA0EB800155654 /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96B9312AFA0EB800155654 /* TimelineView.swift */; };
+		2A96B9362AFA829700155654 /* MeasurementCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96B9352AFA829700155654 /* MeasurementCard.swift */; };
+		2A96B93A2AFA8E2E00155654 /* WeightEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96B9392AFA8E2E00155654 /* WeightEditorView.swift */; };
+		2A96B93C2AFA8E4500155654 /* BloodPressureEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96B93B2AFA8E4500155654 /* BloodPressureEditorView.swift */; };
+		2A96B93F2AFA916400155654 /* WeightEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96B93E2AFA916400155654 /* WeightEditorViewModel.swift */; };
+		2A96B9432AFA91D600155654 /* BioMeasurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96B9422AFA91D600155654 /* BioMeasurement.swift */; };
+		2A96B9462AFA927C00155654 /* BloodPressureEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96B9452AFA927C00155654 /* BloodPressureEditorViewModel.swift */; };
+		2A96B9482AFA993C00155654 /* Binding+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96B9472AFA993C00155654 /* Binding+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,8 +29,14 @@
 		2A722C072AE401490049BBEC /* SwiftDataStudy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftDataStudy.entitlements; sourceTree = "<group>"; };
 		2A722C082AE401490049BBEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A96B92F2AFA0EB800155654 /* MeasuredRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasuredRecord.swift; sourceTree = "<group>"; };
-		2A96B9302AFA0EB800155654 /* MeasurmentEditorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasurmentEditorView.swift; sourceTree = "<group>"; };
-		2A96B9312AFA0EB800155654 /* MeasurementListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasurementListView.swift; sourceTree = "<group>"; };
+		2A96B9312AFA0EB800155654 /* TimelineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
+		2A96B9352AFA829700155654 /* MeasurementCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementCard.swift; sourceTree = "<group>"; };
+		2A96B9392AFA8E2E00155654 /* WeightEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightEditorView.swift; sourceTree = "<group>"; };
+		2A96B93B2AFA8E4500155654 /* BloodPressureEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodPressureEditorView.swift; sourceTree = "<group>"; };
+		2A96B93E2AFA916400155654 /* WeightEditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightEditorViewModel.swift; sourceTree = "<group>"; };
+		2A96B9422AFA91D600155654 /* BioMeasurement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioMeasurement.swift; sourceTree = "<group>"; };
+		2A96B9452AFA927C00155654 /* BloodPressureEditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodPressureEditorViewModel.swift; sourceTree = "<group>"; };
+		2A96B9472AFA993C00155654 /* Binding+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +70,11 @@
 			isa = PBXGroup;
 			children = (
 				2A722BFC2AE401480049BBEC /* SwiftDataStudyApp.swift */,
-				2A96B92F2AFA0EB800155654 /* MeasuredRecord.swift */,
-				2A96B9312AFA0EB800155654 /* MeasurementListView.swift */,
-				2A96B9302AFA0EB800155654 /* MeasurmentEditorView.swift */,
+				2A96B9492AFA994100155654 /* Extensions */,
+				2A96B9442AFA925500155654 /* Timeline */,
+				2A96B93D2AFA914900155654 /* Weight */,
+				2A96B9402AFA918B00155654 /* BloodPressure */,
+				2A96B9412AFA91B100155654 /* Models */,
 				2A722C022AE401490049BBEC /* Assets.xcassets */,
 				2A722C072AE401490049BBEC /* SwiftDataStudy.entitlements */,
 				2A722C082AE401490049BBEC /* Info.plist */,
@@ -75,6 +89,50 @@
 				2A722C052AE401490049BBEC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2A96B93D2AFA914900155654 /* Weight */ = {
+			isa = PBXGroup;
+			children = (
+				2A96B93E2AFA916400155654 /* WeightEditorViewModel.swift */,
+				2A96B9392AFA8E2E00155654 /* WeightEditorView.swift */,
+			);
+			path = Weight;
+			sourceTree = "<group>";
+		};
+		2A96B9402AFA918B00155654 /* BloodPressure */ = {
+			isa = PBXGroup;
+			children = (
+				2A96B93B2AFA8E4500155654 /* BloodPressureEditorView.swift */,
+				2A96B9452AFA927C00155654 /* BloodPressureEditorViewModel.swift */,
+			);
+			path = BloodPressure;
+			sourceTree = "<group>";
+		};
+		2A96B9412AFA91B100155654 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2A96B92F2AFA0EB800155654 /* MeasuredRecord.swift */,
+				2A96B9422AFA91D600155654 /* BioMeasurement.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2A96B9442AFA925500155654 /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				2A96B9312AFA0EB800155654 /* TimelineView.swift */,
+				2A96B9352AFA829700155654 /* MeasurementCard.swift */,
+			);
+			path = Timeline;
+			sourceTree = "<group>";
+		};
+		2A96B9492AFA994100155654 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2A96B9472AFA993C00155654 /* Binding+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,10 +205,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A96B9332AFA0EB800155654 /* MeasurmentEditorView.swift in Sources */,
+				2A96B93F2AFA916400155654 /* WeightEditorViewModel.swift in Sources */,
+				2A96B9432AFA91D600155654 /* BioMeasurement.swift in Sources */,
+				2A96B9362AFA829700155654 /* MeasurementCard.swift in Sources */,
+				2A96B93A2AFA8E2E00155654 /* WeightEditorView.swift in Sources */,
+				2A96B93C2AFA8E4500155654 /* BloodPressureEditorView.swift in Sources */,
+				2A96B9462AFA927C00155654 /* BloodPressureEditorViewModel.swift in Sources */,
 				2A722BFD2AE401480049BBEC /* SwiftDataStudyApp.swift in Sources */,
-				2A96B9342AFA0EB800155654 /* MeasurementListView.swift in Sources */,
+				2A96B9342AFA0EB800155654 /* TimelineView.swift in Sources */,
 				2A96B9322AFA0EB800155654 /* MeasuredRecord.swift in Sources */,
+				2A96B9482AFA993C00155654 /* Binding+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

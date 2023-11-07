@@ -27,7 +27,7 @@ struct SwiftDataStudyApp: App {
 
     var body: some Scene {
         WindowGroup {
-            MeasurementListView()
+            TimelineView()
         }
 //        .modelContainer(for: [MeasuredRecord.self])
         .modelContainer(sharedModelContainer)
