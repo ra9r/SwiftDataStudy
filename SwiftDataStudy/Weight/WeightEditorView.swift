@@ -19,24 +19,25 @@ struct WeightEditorView: View {
     }
     
     var body: some View {
-        VStack(spacing:10) {
-            Text("Weight: \(vm.amount) \(vm.units)")
-                .font(.title)
-            
-            Button("Change Data") {
-                if vm.isEditMode {
-                    vm.amount += 1
-                } else {
-                    vm.amount = 180
+        Group {
+            Form {
+                TextField("Weight", text: $vm.amount)
+                    .keyboardType(.numberPad)
+                
+                Picker("Units", selection: $vm.units) {
+                    Text("Pounds").tag("lbs")
+                    Text("Kilograms").tag("kg")
                 }
-            }
-            
-            Button((vm.isEditMode) ? "Update" : "Save") {
-                vm.saveOrUpdate(ctx) { error in
-                    if let error {
-                        print("Unabled to save weight: \(error.localizedDescription)")
+                
+                DatePicker("MeasuredOn", selection: $vm.measuredOn)
+                
+                Button((vm.isEditMode) ? "Update" : "Save") {
+                    vm.saveOrUpdate(ctx) { error in
+                        if let error {
+                            print("Unabled to save weight: \(error.localizedDescription)")
+                        }
+                        dismiss()
                     }
-                    dismiss()
                 }
             }
         }

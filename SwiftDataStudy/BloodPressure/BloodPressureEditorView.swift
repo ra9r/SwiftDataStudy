@@ -18,21 +18,29 @@ struct BloodPressureEditorView: View {
     }
     
     var body: some View {
-        VStack {
-            Text("Blood Pressure: \(vm.systolic)/\(vm.diastolic) \(vm.heartRate) bps")
-                .font(.title)
-            
-            Button("Change Data") {
-                if vm.isEditMode {
-                    vm.systolic += 1
-                    vm.diastolic -= 1
-                    vm.heartRate -= 1
-                } else {
-                    vm.systolic = 120
-                    vm.diastolic = 70
-                    vm.heartRate = 65
-                }
+        List {
+            HStack {
+                Text("Systolic").font(.headline)
+                Spacer()
+                TextField("Systolic", text:$vm.systolic, prompt: Text("e.g. 120"))
+                    .padding(.all)
+                    .keyboardType(.numberPad)
             }
+            HStack {
+                Text("Diastolic").font(.headline)
+                Spacer()
+                TextField("Diastolic", text:$vm.diastolic, prompt: Text("e.g. 80"))
+                    .padding(.all)
+                    .keyboardType(.numberPad)
+            }
+            HStack {
+                Text("Heart Rate").font(.headline)
+                Spacer()
+                TextField("Heart Rate", text:$vm.heartRate, prompt: Text("65"))
+                    .padding(.all)
+                    .keyboardType(.numberPad)
+            }
+            DatePicker("MeasuredOn", selection: $vm.measuredOn)
             
             Button((vm.isEditMode) ? "Update Data" : "Add Data") {
                 vm.saveOrUpdate(ctx) { error in
@@ -44,7 +52,7 @@ struct BloodPressureEditorView: View {
             }
         }
         .navigationBarTitleDisplayMode(.inline)
-        .navigationTitle((vm.isEditMode) ? "Weight Editor" : "Add Weight")
+        .navigationTitle((vm.isEditMode) ? "BloodPressure Editor" : "Add BloodPressure")
         
     }
 }

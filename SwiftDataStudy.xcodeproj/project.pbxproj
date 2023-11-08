@@ -94,8 +94,8 @@
 		2A96B93D2AFA914900155654 /* Weight */ = {
 			isa = PBXGroup;
 			children = (
-				2A96B93E2AFA916400155654 /* WeightEditorViewModel.swift */,
 				2A96B9392AFA8E2E00155654 /* WeightEditorView.swift */,
+				2A96B93E2AFA916400155654 /* WeightEditorViewModel.swift */,
 			);
 			path = Weight;
 			sourceTree = "<group>";

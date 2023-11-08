@@ -3,7 +3,7 @@ import SwiftData
 
 struct TimelineView: View {
     @Environment(\.modelContext) var ctx
-    @Query var records: [MeasuredRecord]
+    @Query(sort: [SortDescriptor(\MeasuredRecord.measuredOn, order: .reverse)]) var records: [MeasuredRecord]
     @State var selectedMenuOption: MenuOption? = nil
     
     

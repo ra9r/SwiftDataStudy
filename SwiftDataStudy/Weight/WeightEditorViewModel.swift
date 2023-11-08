@@ -14,7 +14,7 @@ extension WeightEditorView {
     class ViewModel {
         var record: MeasuredRecord? = nil
         var measuredOn: Date = Date.now
-        var amount: Int = 0
+        var amount: String = "0"
         var units: String = "lbs"
         
         var isEditMode: Bool = false
@@ -23,7 +23,7 @@ extension WeightEditorView {
             self.record = record
             if let record {
                 if case BioMeasurement.weight(let amount, let units) = record.measurement {
-                    self.amount = amount
+                    self.amount = "\(amount)"
                     self.units = units
                 } else {
                     fatalError("Unsupported measurement expecting Measurement.weight")
@@ -35,7 +35,9 @@ extension WeightEditorView {
         
         func saveOrUpdate(_ ctx: ModelContext, completion: @escaping (Error?) -> Void) {
             do {
-                let measurement = BioMeasurement.weight(amount: self.amount, units: self.units)
+                let measurement = BioMeasurement.weight(
+                    amount: Int(self.amount) ?? 0,
+                    units: self.units)
                 if let record = self.record {
                     record.measurement = measurement
                     record.measuredOn = self.measuredOn

@@ -14,9 +14,9 @@ extension BloodPressureEditorView {
     class ViewModel {
         var record: MeasuredRecord? = nil
         var measuredOn: Date = Date.now
-        var systolic: Int = 0
-        var diastolic: Int = 0
-        var heartRate: Int = 0
+        var systolic: String = "0"
+        var diastolic: String = "0"
+        var heartRate: String = "0"
         
         var isEditMode: Bool = false
         
@@ -24,9 +24,9 @@ extension BloodPressureEditorView {
             self.record = record
             if let record {
                 if case BioMeasurement.bloodPressure(let systolic, let diastolic, let heartRate) = record.measurement {
-                    self.systolic = systolic
-                    self.diastolic = diastolic
-                    self.heartRate = heartRate
+                    self.systolic = "\(systolic)"
+                    self.diastolic = "\(diastolic)"
+                    self.heartRate = "\(heartRate)"
                 } else {
                     fatalError("Unsupported measurement expecting Measurement.bloodpressure")
                 }
@@ -38,9 +38,9 @@ extension BloodPressureEditorView {
         func saveOrUpdate(_ ctx: ModelContext, completion: @escaping (Error?) -> Void) {
             do {
                 let measurement = BioMeasurement.bloodPressure(
-                    systolic: self.systolic,
-                    diastolic: self.diastolic,
-                    heartRate: self.heartRate)
+                    systolic: Int(self.systolic) ?? 0,
+                    diastolic: Int(self.diastolic) ?? 0,
+                    heartRate: Int(self.heartRate) ?? 0)
                 if let record = self.record {
                     record.measurement = measurement
                     record.measuredOn = self.measuredOn
